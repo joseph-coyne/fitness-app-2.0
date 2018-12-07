@@ -1,0 +1,2 @@
+class AppointmentItem < ApplicationRecord
+end
