@@ -1,0 +1,2 @@
+class TrainerTag < ApplicationRecord
+end
