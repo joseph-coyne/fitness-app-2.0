@@ -1,2 +1,0 @@
-class TrainerTag < ApplicationRecord
-end
