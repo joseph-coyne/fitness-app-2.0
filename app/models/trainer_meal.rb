@@ -1,0 +1,2 @@
+class TrainerMeal < ApplicationRecord
+end
