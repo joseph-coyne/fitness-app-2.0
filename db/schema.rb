@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_12_07_211017) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +30,8 @@ ActiveRecord::Schema.define(version: 2018_12_07_211017) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "info"
+
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -65,6 +68,15 @@ ActiveRecord::Schema.define(version: 2018_12_07_211017) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "trainer_meals", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "meal_id"
+    t.integer "trainer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 
   create_table "trainer_tags", force: :cascade do |t|
     t.integer "tag_id"
