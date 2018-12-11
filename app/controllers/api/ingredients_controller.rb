@@ -1,7 +1,5 @@
 class Api::IngredientsController < ApplicationController
 
-  class Api::IngredientsController < ApplicationController
-
     def index
       @ingredients = Ingredient.all
       render "index.json.jbuilder"
@@ -12,6 +10,5 @@ class Api::IngredientsController < ApplicationController
       render "show.json.jbuilder"
     end
     
-  end
   
 end
