@@ -1,3 +1,3 @@
-json.array! @appointments.each do |appointment|
-  json.partial! "appointment.json.jbuilder", appointment: appointment
+json.array! @tags.each do |tag|
+  json.partial! "tag.json.jbuilder", tag: tag
 end
