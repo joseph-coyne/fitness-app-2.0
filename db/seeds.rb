@@ -209,5 +209,5 @@ UserWorkout.create!([
   {user_id: 2, workout_id: 3, times_done: 1},
   {user_id: 3, workout_id: 1, times_done: 1},
   {user_id: 1, workout_id: 2, times_done: 1},
-  {user_id: 1, workout_id: 4, times_done: 2},
+  {user_id: 1, workout_id: 4, times_done: 2}
 ])
