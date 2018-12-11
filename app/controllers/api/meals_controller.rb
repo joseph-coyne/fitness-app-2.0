@@ -1,5 +1,4 @@
 class Api::MealsController < ApplicationController
-  class Api::MealsController < ApplicationController
     before_action :authenticate_user
     require "http"
 
@@ -83,7 +82,5 @@ class Api::MealsController < ApplicationController
       @meal.destroy
       render json: {message: "Deleted Meal!"}
     end
-
-  end
-
+  
 end
