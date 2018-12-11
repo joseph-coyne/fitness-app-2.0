@@ -18,6 +18,5 @@ Rails.application.routes.draw do
     get "/meals/:id" => "meals#show"
     get "/meals/:id/edit" => "meals#edit"
 
-    
-end
+  end
 end
