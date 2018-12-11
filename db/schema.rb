@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_07_201325) do
+ActiveRecord::Schema.define(version: 2018_12_11_194102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,62 @@ ActiveRecord::Schema.define(version: 2018_12_07_201325) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "time"
+    t.string "focus"
+    t.integer "trainer_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "info"
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.string "nutritionix_api_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "meal_ingredients", force: :cascade do |t|
+    t.integer "ingredient_id"
+    t.integer "meal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "meals", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.string "recipe_instructions"
+    t.string "meal_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trainer_meals", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "meal_id"
+    t.integer "trainer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trainer_tags", force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "trainer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,9 +90,55 @@ ActiveRecord::Schema.define(version: 2018_12_07_201325) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "trainers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.date "birthdate"
+    t.string "gender"
+    t.string "avatar"
+    t.text "bio"
+    t.integer "rating"
+    t.string "video"
+    t.boolean "nutritionist"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "user_workouts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "workout_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.date "birthdate"
+    t.string "gender"
+    t.integer "weight"
+    t.integer "height"
+    t.string "avatar"
+    t.string "bio"
+    t.string "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string "name"
+    t.time "time"
+    t.string "image"
+    t.text "description"
+    t.string "level"
+    t.string "category"
+    t.string "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
