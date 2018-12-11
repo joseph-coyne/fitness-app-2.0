@@ -23,7 +23,7 @@ class Api::TrainersController < ApplicationController
 
 	def create
 		@trainer = Trainer.new(
-	    first_name: params[:first_name],
+	    		first_name: params[:first_name],
 			last_name: params[:last_name],
 			username: params[:username],
 			email: params[:email],
@@ -40,11 +40,11 @@ class Api::TrainersController < ApplicationController
 	  )
 
 	  if @trainer.save
-				tags = params[:tags].split(",")
-	  		tags.each do |tag|
-	  				TrainerTag.create(trainer_id: @trainer.id, tag_id: tag)
-	  		end
-				render 'show.json.jbuilder'
+		tags = params[:tags].split(",")
+	  	tags.each do |tag|
+	  		TrainerTag.create(trainer_id: @trainer.id, tag_id: tag)
+	  	end
+		render 'show.json.jbuilder'
 	    render json: {message: 'Trainer created successfully'}, status: :created
 	  else
 	    render json: {errors: @trainer.errors.full_messages}, status: :bad_request
