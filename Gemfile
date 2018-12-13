@@ -56,3 +56,5 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'geocoder'
 
 gem 'seed_dump'
+
+gem 'figaro'
