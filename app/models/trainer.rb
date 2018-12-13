@@ -14,6 +14,8 @@ class Trainer < ApplicationRecord
 	  has_many :users, through: :appointments
 	  has_many :trainer_tags
 	  has_many :tags, through: :trainer_tags
+	  has_many :workouts
+	  has_many :workouts, through: :trainer_workouts
 
 	  has_one_attached :image
 
