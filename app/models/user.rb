@@ -39,19 +39,6 @@ class User < ApplicationRecord
     elsif progress = 100
       "President of Taking Credit"
       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-      
-
-
     end
   end
 end
