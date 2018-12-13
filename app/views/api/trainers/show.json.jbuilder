@@ -1,0 +1,1 @@
+json.partial! "trainer.json.jbuilder", trainer: @trainer
