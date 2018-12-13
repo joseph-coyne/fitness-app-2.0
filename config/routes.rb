@@ -21,5 +21,9 @@ Rails.application.routes.draw do
     get "/meals/new" => "meals#new"
     get "/meals/:id" => "meals#show"
     get "/meals/:id/edit" => "meals#edit"
+
+    post "/user_sessions" => "sessions#user_create"
+    post "/trainer_sessions" => "sessions#trainer_create"
+
   end
 end
