@@ -1,0 +1,1 @@
+json.partial! "ingredient.json.jbuilder", ingredient: ingredient
