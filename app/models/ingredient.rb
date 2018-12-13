@@ -1,5 +1,5 @@
 class Ingredient < ApplicationRecord
-  has_many :ingredient_meals
+  has_many :meal_ingredients
   has_many :meals, through: : meal_ingredients
 
   def nutrients
