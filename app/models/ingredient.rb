@@ -1,6 +1,6 @@
 class Ingredient < ApplicationRecord
   has_many :ingredient_meals
-  has_many :meals, through: :ingredient_meals
+  has_many :meals, through: : meal_ingredients
 
   def nutrients
     # use api id to retrieve nutrients for this ingredient
