@@ -201,7 +201,10 @@ Workout.create!([
 	{name:"The Wall",time:"15mins",image:"https://imgur.com/sopjrqv",description:"",level:"intermediate"},
 	{name:"Thunderbolt",time:"15mins",image:"https://imgur.com/T2kZeFC",description:"",level:"intermediate"},
 	{name:"Yoga Fix",time:"15mins",image:"https://imgur.com/9QaBsDQ",description:"",level:"intermediate"},
-	{name:"Cardio Mixer", time:"15mins",image:"https://i.imgur.com/MloUIP3.jpg",description:"",level:"intermediate"}
+	{name:"Cardio Mixer", time:"15mins",image:"https://i.imgur.com/MloUIP3.jpg",description:"",level:"intermediate"},
+  {name:"Eye Rest", time:"15mins",image:"https://i.imgur.com/undefined.jpg",description:"",level:"advanced"},
+  {name:"Hand Tendons", time:"15mins",image:"https://i.imgur.com/wU4DlHd.jpg",description:"",level:"advanced"},
+  {name:"Lower Back", time:"15mins",image:"https://i.imgur.com/waU6gC4.jpg",description:"",level:"advanced"}
 ])
 
 UserWorkout.create!([

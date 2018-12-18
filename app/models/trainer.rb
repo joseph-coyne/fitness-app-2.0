@@ -17,7 +17,7 @@ class Trainer < ApplicationRecord
 	  has_many :workouts
 	  has_many :workouts, through: :trainer_workouts
 
-	  has_one_attached :image
+	  has_one_attached :avatar
 
 
 		def full_name

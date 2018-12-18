@@ -1,5 +1,5 @@
-json.partial! "meal.json.jbuilder", meal: @meal
-
-json.ingredients do
-  json.array! @meal.ingredients, partial: 'api/ingredients/ingredient', as: :ingredient
-end
+json.id meal.id
+json.name meal.name
+json.user_id meal.user_id
+json.recipe_instructions meal.recipe_instructions
+# json.nutrients meal.nutrients
