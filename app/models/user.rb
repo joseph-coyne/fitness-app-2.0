@@ -48,7 +48,7 @@ class User < ApplicationRecord
       "Shitstorm Manager"
     elsif progress >= 90 && progress < 100
       "Chief Troublemaker"
-    elsif progress = 100
+    elsif progress == 100
       "President of Taking Credit"
       
     end
