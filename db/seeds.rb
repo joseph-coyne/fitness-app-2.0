@@ -205,7 +205,6 @@ Workout.create!([
   {name:"Eye Rest", time:"15mins",image:"https://i.imgur.com/undefined.jpg",description:"",level:"advanced"},
   {name:"Hand Tendons", time:"15mins",image:"https://i.imgur.com/wU4DlHd.jpg",description:"",level:"advanced"},
   {name:"Lower Back", time:"15mins",image:"https://i.imgur.com/waU6gC4.jpg",description:"",level:"advanced"}
-
 ])
 
 UserWorkout.create!([
