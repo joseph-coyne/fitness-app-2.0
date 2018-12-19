@@ -17,10 +17,14 @@ Rails.application.routes.draw do
     get "/user_workouts/:id" => "user_workouts#show"
     post "/user_workouts" => "user_workouts#create"
 
+    get "/ingredients" => "ingredients#index"
+    get "/ingredients/:id" => "ingredients#show"
+
     get "/meals" => "meals#index"
-    get "/meals/new" => "meals#new"
+    post "/meals" => "meals#create"
     get "/meals/:id" => "meals#show"
-    get "/meals/:id/edit" => "meals#edit"
+    patch "/meals/:id" => "meals#update"
+    delete "/meals/:id" => "meals#destroy"
 
     post "/user_sessions" => "sessions#user_create"
     post "/trainer_sessions" => "sessions#trainer_create"
