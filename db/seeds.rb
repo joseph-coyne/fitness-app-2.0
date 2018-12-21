@@ -139,14 +139,14 @@ Meal.create!([
 ])
 
 Ingredient.create!([
-  {name: "chuck steak", nutritionix_api_id: "58ad39bdf7f1352754691416"},
-  {name: "banana", nutritionix_api_id: "513fceb475b8dbbc21000fd4"},
-  {name: "chicken breast", nutritionix_api_id: "5898f5c6f79abfe90cf0ba45"},
-  {name: "jasmine rice", nutritionix_api_id: "513fceb775b8dbbc21002dc6"},
-  {name: "new york strip", nutritionix_api_id: "529e7f4eea63d493350092b4"},
-  {name: "red potato", nutritionix_api_id: "513fceb575b8dbbc21001668"},
-  {name: "salmon", nutritionix_api_id: "5762fae2093a4553105bc7e1"},
-  {name: "quinoa", nutritionix_api_id: "571e59bc2b74af3428870ff8"}
+  {name: "chuck steak", protein: 23, carbohydrates: 0, fat: 6, magnesium: 0, iron: 15, zinc: 0, folate: 0, vitamin_d: 0},
+  {name: "banana", protein: 1.1, carbohydrates: 23.07, fat: 0.33, magnesium: 27.27, iron: 0.26, zinc: 0.15, folate: 20.2, vitamin_d: 0},
+  {name: "chicken breast", protein: 42.54, carbohydrates: 0, fat: 9.6, magnesium: 0, iron: 3.89, zinc: 0, folate: 0, vitamin_d: 0},
+  {name: "jasmine rice", protein: 4.25, carbohydrates: 44.51, fat: 0.44, magnesium: 18.96, iron: 10.53, zinc: 0.77, folate: 91.64, vitamin_d: 0},
+  {name: "new york strip", protein: 71, carbohydrates: 3, fat: 63, magnesium: 0, iron: 0, zinc: 0, folate: 0, vitamin_d: 0},
+  {name: "red potato", protein: 3.17, carbohydrates: 27.03, fat: 0.21, magnesium: 38.64, iron: 5.37, zinc: 0.55, folate: 37.26, vitamin_d: 0},
+  {name: "salmon", protein: 50.18, carbohydrates: 0, fat: 28.04, magnesium: nil, iron: 4.3, zinc: 0, folate: 0, vitamin_d: 0},
+  {name: "quinoa", protein: 4.07, carbohydrates: 19.7, fat: 1.77, magnesium: 0, iron: 7.66, zinc: 0, folate: 0, vitamin_d: 0}
 ])
 
 MealIngredient.create!([

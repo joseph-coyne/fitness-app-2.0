@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_11_201911) do
+ActiveRecord::Schema.define(version: 2018_12_18_205718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,9 +35,16 @@ ActiveRecord::Schema.define(version: 2018_12_11_201911) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.string "nutritionix_api_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "protein", precision: 5, scale: 2
+    t.decimal "carbohydrates", precision: 5, scale: 2
+    t.decimal "fat", precision: 5, scale: 2
+    t.decimal "magnesium", precision: 5, scale: 2
+    t.decimal "iron", precision: 5, scale: 2
+    t.decimal "zinc", precision: 5, scale: 2
+    t.decimal "folate", precision: 5, scale: 2
+    t.decimal "vitamin_d", precision: 5, scale: 2
   end
 
   create_table "items", force: :cascade do |t|
