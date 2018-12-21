@@ -23,6 +23,7 @@ class Api::AppointmentsController < ApplicationController
 
       @appointment = Appointment.new(
         time: params[:time].first(-4) << "00:00",
+        focus: params[:focus],
         trainer_id: params[:trainer_id],
         user_id: current_user.id
         )
@@ -41,6 +42,7 @@ class Api::AppointmentsController < ApplicationController
       @appointment = Appointment.find_by(id:params[:id])
 
       @appointment.time = params[:time] || @appointment.time
+      @appointment.focus = params[:focus] || @appointment.focus
       if @appointment.save
         render 'show.json.jbuilder'
       else
