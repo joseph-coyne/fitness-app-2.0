@@ -8,7 +8,7 @@ json.rating trainer.rating
 json.email trainer.email
 json.birthdate trainer.birthdate
 json.gender trainer.gender
-json.avatar rails_blob_url(trainer.avatar) if trainer.avatar.attachment
+# json.avatar rails_blob_url(trainer.avatar) if trainer.avatar.attachment
 json.bio trainer.bio
 json.rating trainer.rating
 json.nutritionist trainer.nutritionist
