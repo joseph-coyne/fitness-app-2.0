@@ -5,7 +5,7 @@ class User < ApplicationRecord
 	has_many :appointments
 	has_many :trainers, through: :appointments
 	has_one_attached :image
-  has_many :meals
+ 
 	
   has_many :user_workouts
   has_many :workouts,through: :user_workouts
