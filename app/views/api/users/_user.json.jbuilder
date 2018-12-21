@@ -10,6 +10,6 @@ json.weight user.weight
 json.height user.height
 json.bio user.bio
 json.level user.level
-# json.avatar rails_blob_url(user.avatar) if user.avatar.attachment
+json.avatar rails_blob_url(user.avatar) if user.avatar.attachment
 json.created_at user.created_at
 json.updated_at user.updated_at
