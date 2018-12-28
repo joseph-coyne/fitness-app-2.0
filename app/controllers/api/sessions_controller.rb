@@ -17,7 +17,6 @@ class Api::SessionsController < ApplicationController
 		  end
 		end
 
-
 		def trainer_create
 		  trainer = Trainer.find_by(email: params[:email])
 		  if trainer && trainer.authenticate(params[:password])
