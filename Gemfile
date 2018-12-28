@@ -58,3 +58,4 @@ gem 'geocoder'
 gem 'seed_dump'
 
 gem 'figaro'
+
