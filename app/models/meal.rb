@@ -1,7 +1,6 @@
 class Meal < ApplicationRecord
 
   belongs_to :user
-  belongs_to :trainer
   has_many :meal_ingredients, dependent: :destroy
   has_many :ingredients, through: :meal_ingredients
 
