@@ -6,7 +6,7 @@ class User < ApplicationRecord
 	has_many :trainers, through: :appointments
 	has_one_attached :image
 
-	has_many :meals, dependent: :destroy
+	
   has_many :user_workouts
   has_many :workouts,through: :user_workouts
   has_one_attached :avatar
