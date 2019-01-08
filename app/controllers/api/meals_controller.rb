@@ -1,5 +1,4 @@
 class Api::MealsController < ApplicationController
-
   before_action :authenticate_user
   require "http"
 
