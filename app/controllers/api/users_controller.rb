@@ -1,6 +1,5 @@
 class Api::UsersController < ApplicationController
 	before_action :authenticate_user, except: [:create, :show]
-
 	def profile
 		@user = current_user
 		render 'show.json.jbuilder'

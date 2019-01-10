@@ -24,20 +24,20 @@ class Api::TrainersController < ApplicationController
 		def create
 				@trainer = Trainer.new(
 	    		first_name: params[:first_name],
-				last_name: params[:last_name],
-				username: params[:username],
-				email: params[:email],
-				password: params[:password],
-				password_confirmation: params[:password_confirmation],
-				birthdate: params[:birthdate],
-				gender: params[:gender],
-				bio: params[:bio],
-				avatar: params[:avatar],
-				location: params[:location],
-				video: params[:video],
-				nutritionist: params[:nutritionist],
-				rating: params[:rating]
-	  )
+					last_name: params[:last_name],
+					username: params[:username],
+					email: params[:email],
+					password: params[:password],
+					password_confirmation: params[:password_confirmation],
+					birthdate: params[:birthdate],
+					gender: params[:gender],
+					bio: params[:bio],
+					avatar: params[:avatar],
+					location: params[:location],
+					video: params[:video],
+					nutritionist: params[:nutritionist],
+					rating: params[:rating]
+					)
 
 	  	if @trainer.save
 						tags = params[:tags].split(",")

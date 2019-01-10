@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
   
   def user_name
-	first_name + " " + last_name
+	 first_name + " " + last_name
   end
   def calculated_progress
     completed = 0
