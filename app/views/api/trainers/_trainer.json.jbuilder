@@ -1,4 +1,3 @@
-
 json.id trainer.id
 json.first_name trainer.first_name
 json.last_name trainer.last_name
