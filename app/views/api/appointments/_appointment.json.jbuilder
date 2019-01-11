@@ -6,7 +6,7 @@ json.strftime appointment.strftime
 json.trainer_id appointment.trainer_id
 json.trainer_first_name appointment.trainer.first_name
 json.trainer_last_name appointment.trainer.last_name
-# json.trainer_avatar rails_blob_url(appointment.trainer.avatar)
+json.trainer_avatar rails_blob_url(appointment.trainer.avatar)
 json.items appointment.items
 json.focus appointment.focus
 
