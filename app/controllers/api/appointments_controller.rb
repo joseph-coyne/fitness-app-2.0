@@ -19,8 +19,6 @@ class Api::AppointmentsController < ApplicationController
 
   def create
     if current_user
-
-
       @appointment = Appointment.new(
         time: params[:time].first(-4) << "00:00",
         focus: params[:focus],
@@ -37,7 +35,6 @@ class Api::AppointmentsController < ApplicationController
   end
 
   def update
-
     if current_user
       @appointment = Appointment.find_by(id:params[:id])
 
@@ -57,10 +54,8 @@ class Api::AppointmentsController < ApplicationController
         @appointment.items.destroy_all
         items = params[:items]
         items.each do |item|
-
           Item.create(name: item)
           item = Item.last
-
           AppointmentItem.create(appointment_id: @appointment.id, item_id: item.id)
         end
         render 'show.json.jbuilder'
