@@ -11,7 +11,7 @@ class Trainer < ApplicationRecord
 	  allow_nil: true
 	
 	has_many :meals, dependent: :destroy
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   has_many :users, through: :appointments
   has_many :trainer_tags
   has_many :tags, through: :trainer_tags
