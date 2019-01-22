@@ -10,7 +10,7 @@ class Trainer < ApplicationRecord
 	  length: { in: 6..255 },
 	  allow_nil: true
 	has_many :trainer_meals
-	has_many :meals, through: :trainer_meals, dependent: :destroy, optional: true
+	has_many :meals, through: :trainer_meals, dependent: :destroy
   has_many :appointments, dependent: :destroy
   has_many :users, through: :appointments
   has_many :trainer_tags

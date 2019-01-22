@@ -18,8 +18,9 @@ class Api::MealsController < ApplicationController
 
   def create
     @meal = Meal.create(
-      name: params[:name],
-      recipe_instructions: params[:recipe_instructions],
+      name: params[:name].strip,
+      meal_type: params[:meal_type],
+      recipe_instructions: params[:recipe_instructions].strip,
       user_id: current_user.id
     )
 
