@@ -1,4 +1,4 @@
-json.id workout.id
+# json.id workout.id
 json.name workout.name
 json.time workout.time
 json.image workout.image
