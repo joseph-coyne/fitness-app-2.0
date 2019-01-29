@@ -1,6 +1,13 @@
 class Api::UsersController < ApplicationController
 	before_action :authenticate_user, except: [:create, :show]
 
+	def index
+  @users = User.all
+  @users = @users.sort_by{|user| [user.calculated_progress]}.reverse
+  render "index.json.jbuilder"
+
+ end
+
 	def profile
 		@user = current_user
 		render 'show.json.jbuilder'
