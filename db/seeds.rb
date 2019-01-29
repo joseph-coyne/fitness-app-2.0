@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 Trainer.create!([
   {first_name: "Alex", last_name: "Higgens", username: "AHiggens", email: "alex@gmail.com", password_digest: "$2a$10$N1xH2zDYMYNj4hoshZpXKuVGwtWcYSaSQDbddoX1QLvqOVJfPqVlO", birthdate: nil, gender: nil, avatar: "trainer_profile4", bio: " Dui sapien eget mi proin sed libero. Elementum nisi quis eleifend quam adipiscing vitae. Maecenas pharetra convallis posuere morbi. Nisl nisi scelerisque eu ultrices vitae auctor.", rating: 4, video: "https://www.youtube.com/embed/WdlbdIrvhvc", nutritionist: nil, location: "Durham, NC"},
   {first_name: "Luke", last_name: "Cage", username: "CageAgainstTheMachine", email: "luke@gmail.com", password_digest: "$2a$10$VTqmNbWi52CBXn4OmdSKNORPfG6arahvjKd0MNsw82WTUMSSracuu", birthdate: nil, gender: nil, avatar: nil, bio: "A pellentesque sit amet porttitor eget dolor morbi non arcu. Tristique nulla aliquet enim tortor at auctor urna nunc. Pharetra convallis posuere morbi leo urna molestie at elementum eu. Tristique senectus et netus et malesuada fames ac turpis.", rating: 3, video: nil, nutritionist: nil, location: "Hell's Kitchen, NY"},
