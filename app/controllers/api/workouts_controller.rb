@@ -7,7 +7,7 @@ class Api::WorkoutsController < ApplicationController
 
   def show
     @workouts = Workout.all
-    @workouts = @workouts.sample
+    @workout = @workouts.sample
     # @workout = Workout.find_by(id:params[:id])
     render "show.json.jbuilder"
   end
