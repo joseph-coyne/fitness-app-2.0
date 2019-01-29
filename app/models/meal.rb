@@ -1,9 +1,12 @@
 class Meal < ApplicationRecord
 
+  
   belongs_to :user
-  belongs_to :trainer_meals, optional: true
   has_many :meal_ingredients, dependent: :destroy
   has_many :ingredients, through: :meal_ingredients
+  has_many :trainer_meals, dependent: :destroy
+  has_many :trainers, through: :trainer_meals
+
 
   validates :name, presence: true
   validates :recipe_instructions, presence: true, length: {maximum: 200}
