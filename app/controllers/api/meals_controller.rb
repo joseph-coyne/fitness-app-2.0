@@ -1,27 +1,31 @@
 class Api::MealsController < ApplicationController
-  before_action :authenticate_user
+
   require "http"
 
   def index
-    #create action to show users meals by default and using parameters to see all users meals (icebox)
-    @meals = current_user.meals
-    # if params[:search] == "all"
-    #   @meals = Meal.all
-    # end
-    render "index.json.jbuilder"
+    if current_user
+      @meals = current_user.meals
+      render 'index.json.jbuilder'
+    elsif current_trainer
+      @meals = current_trainer.meals
+      render 'index.json.jbuilder'
+    else
+      render json: []
+    end
   end
 
   def show
-    @meal = current_user
+    @meal = Meal.find_by(id: params[:id])
     render "show.json.jbuilder"
   end
 
   def create
+    
     @meal = Meal.create(
       name: params[:name].strip,
       meal_type: params[:meal_type],
       recipe_instructions: params[:recipe_instructions].strip,
-      user_id: current_user.id
+      user_id: params[:user_id]
     )
 
     if @meal.save # happy path
@@ -79,8 +83,18 @@ class Api::MealsController < ApplicationController
 
           #add ingredient id to join table
           MealIngredient.create([
-            {meal_id: @meal.id, ingredient_id: new_ingredient.id}
+            {  meal_id: @meal.id, 
+              ingredient_id: new_ingredient.id
+            }
           ])
+        end
+        # creates join table for traienr meals
+        if params[:trainer_id]
+          TrainerMeal.create({
+            meal_id: @meal.id, 
+            user_id: params[:user_id], 
+            trainer_id: params[:trainer_id]
+          })
         end
       end
       render "show.json.jbuilder"
@@ -105,5 +119,5 @@ class Api::MealsController < ApplicationController
     @meal.destroy
     render json: {message: "Deleted Meal!"}
   end
-  
+
 end

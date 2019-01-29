@@ -7,14 +7,16 @@ class User < ApplicationRecord
   has_one_attached :image
  
   has_many :meals, dependent: :destroy
+  has_many :trainer_meals
+  has_many :trainers, through: :trainer_meals
   has_many :user_workouts, dependent: :destroy
   has_many :workouts,through: :user_workouts
   has_one_attached :avatar
   
-  def user_name
+  def full_name
 	 first_name + " " + last_name
   end
-  
+
   def calculated_progress
     completed = 0
     user_workouts.each do |workout|
