@@ -6,8 +6,8 @@ class Api::WorkoutsController < ApplicationController
   end
 
   def show
-    workouts = Workout.where(level: current_user.level.downcase) 
-    @workout = workouts.sample
+    @workouts = Workout.all
+    @workouts = @workouts.sample
     # @workout = Workout.find_by(id:params[:id])
     render "show.json.jbuilder"
   end

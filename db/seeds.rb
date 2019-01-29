@@ -34,6 +34,13 @@ Trainer.create!([
   {first_name: "l", last_name: "l", username: "l", email: "l@gmail.com", password_digest: "$2a$10$KBcQTgNsNczoqVMm0Ve8w.qEUiZvr087uBg8JXKfGiKCxyIi1iuWC", birthdate: "1955-04-22", gender: nil, avatar: nil, bio: nil, rating: nil, video: nil, nutritionist: nil, location: nil},
   {first_name: "c", last_name: "c", username: "c", email: "c@gmail.com", password_digest: "$2a$10$xAKBswVgZbIPf4RtF6ehv.fRjv0SY5F2f.PWtmU6YFIOQ0aLLOEV6", birthdate: "1955-04-22", gender: nil, avatar: nil, bio: "null", rating: nil, video: nil, nutritionist: nil, location: "99243"}
 ])
+User.create!([
+  {first_name: "Joseph", last_name: "Coyne", username: "jpcoyne", email: "joseph@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1991-03-19", gender: "male", weight: 195, height: 69, avatar: "#<ActionDispatch::Http::UploadedFile:0x00007fb17d888d68>", bio: nil, level: nil},
+  {first_name: "Mike", last_name: "Henze", username: "xXxMikeHenze420xXx", email: "mike@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1989-04-19", gender: "male", weight: 190, height: 70, avatar: "/picture", bio: nil, level: "beginner"},
+  {first_name: "Nnanna", last_name: "Egbujiobi", username: "OhNnannaWhatsMyName", email: "nnanna@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1989-04-19", gender: "male", weight: 190, height: 70, avatar: "/picture", bio: nil, level: "beginner"},
+  {first_name: "Tayt", last_name: "Bicknell", username: "TayterTot", email: "tayt@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1989-04-19", gender: "male", weight: 190, height: 70, avatar: "/picture", bio: nil, level: "beginner"},
+  {first_name: nil, last_name: nil, username: nil, email: "johnny@johnny.com", password_digest: "$2a$10$OZ2.5dkgRSqTQzYvlpMVMeCATcQi32BrT.ds4ix/A/oedcsREySXa", birthdate: nil, gender: nil, weight: nil, height: nil, avatar: nil, bio: nil, level: nil}
+])
 Appointment.create!([
   {time: "2018-11-16 15:00:00", focus: "Upperbody", trainer_id: 2, user_id: 2, info: nil, rating: 5},
   {time: "2018-10-31 12:33:00", focus: "Upperbody", trainer_id: 1, user_id: 2, info: nil, rating: 5},
@@ -42,13 +49,6 @@ Appointment.create!([
   {time: "2018-11-01 05:00:00", focus: "Upperbody", trainer_id: 1, user_id: 1, info: "We'll be going hard on your core this time so be sure to eat a light healthy meal. Or don't. Do whatever.", rating: 3},
   {time: "2019-01-11 15:48:00", focus: nil, trainer_id: 2, user_id: 3, info: nil, rating: nil},
   {time: "2019-01-24 04:21:00", focus: nil, trainer_id: 6, user_id: 4, info: nil, rating: nil}
-])
-User.create!([
-  {first_name: "Joseph", last_name: "Coyne", username: "jpcoyne", email: "joseph@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1991-03-19", gender: "male", weight: 195, height: 69, avatar: "#<ActionDispatch::Http::UploadedFile:0x00007fb17d888d68>", bio: nil, level: nil},
-  {first_name: "Mike", last_name: "Henze", username: "xXxMikeHenze420xXx", email: "mike@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1989-04-19", gender: "male", weight: 190, height: 70, avatar: "/picture", bio: nil, level: "beginner"},
-  {first_name: "Nnanna", last_name: "Egbujiobi", username: "OhNnannaWhatsMyName", email: "nnanna@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1989-04-19", gender: "male", weight: 190, height: 70, avatar: "/picture", bio: nil, level: "beginner"},
-  {first_name: "Tayt", last_name: "Bicknell", username: "TayterTot", email: "tayt@gmail.com", password_digest: "$2a$10$EaauE3spUor5c8b/jOxtjOqOhDX0QZoRRWdRUqOwBzBqx16SYmrtC", birthdate: "1989-04-19", gender: "male", weight: 190, height: 70, avatar: "/picture", bio: nil, level: "beginner"},
-  {first_name: nil, last_name: nil, username: nil, email: "johnny@johnny.com", password_digest: "$2a$10$OZ2.5dkgRSqTQzYvlpMVMeCATcQi32BrT.ds4ix/A/oedcsREySXa", birthdate: nil, gender: nil, weight: nil, height: nil, avatar: nil, bio: nil, level: nil}
 ])
 Item.create!([
   {name: "apple"},
