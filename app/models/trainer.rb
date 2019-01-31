@@ -27,6 +27,11 @@ class Trainer < ApplicationRecord
 	end
 
   def friendly_tags
-	   tags.map { |tag| {name: tag.name, id: tag.id} }
+     tags.map { |tag| {name: tag.name, id: tag.id} }
+  end 
+
+  def tag_names
+	   tags.map { |tag| tag.name  }
   end
+
 end
