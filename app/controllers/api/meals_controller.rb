@@ -1,5 +1,4 @@
 class Api::MealsController < ApplicationController
-
   require "http"
 
   def index

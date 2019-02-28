@@ -73,12 +73,14 @@ class Api::TrainersController < ApplicationController
 						end
 
 						if @trainer.save
+							if params[:tags] != ","
 								@trainer.tags.destroy_all
 								tags = params[:tags].split(",")
-	  					tags.each do |tag|
+	  						tags.each do |tag|
 	  							TrainerTag.create(trainer_id: @trainer.id, tag_id: tag)
-	  					end
+	  						end
 								render 'show.json.jbuilder'
+							end
 						else
 								render json: {errors: @trainer.errors.full_messages}, status: :unprocessable_entity
 						end
