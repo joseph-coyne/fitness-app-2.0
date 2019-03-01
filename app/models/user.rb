@@ -4,8 +4,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   has_many :appointments, dependent: :destroy
   has_many :trainers, through: :appointments
-  has_one_attached :image
- 
   has_many :meals, dependent: :destroy
   has_many :trainer_meals
   has_many :trainers, through: :trainer_meals

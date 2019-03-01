@@ -8,4 +8,9 @@ class Appointment < ApplicationRecord
 	def strftime
 		time.strftime("%A, %B %e at %l:%M %p") || time
 	end
+
+	def trainer_full_name
+		trainer.first_name + " " + trainer.last_name
+		
+	end
 end

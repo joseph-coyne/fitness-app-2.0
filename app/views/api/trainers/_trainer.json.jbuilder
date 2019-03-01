@@ -13,6 +13,7 @@ json.bio trainer.bio
 json.rating trainer.rating
 json.nutritionist trainer.nutritionist
 json.tags trainer.friendly_tags
+json.tag_names trainer.tag_names
 json.location trainer.location
 json.video trainer.video
 json.created_at trainer.created_at

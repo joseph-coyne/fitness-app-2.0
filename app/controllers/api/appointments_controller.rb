@@ -2,10 +2,10 @@ class Api::AppointmentsController < ApplicationController
 
   def index
     if current_user
-      @appointments = current_user.appointments
+      @appointments = current_user.appointments.order('time')
       render 'index.json.jbuilder'
     elsif current_trainer
-      @appointments = current_trainer.appointments
+      @appointments = current_trainer.appointments.order('time DESC')
       render 'index.json.jbuilder'
     else
       render json: []
@@ -20,7 +20,7 @@ class Api::AppointmentsController < ApplicationController
   def create
     if current_user
       @appointment = Appointment.new(
-        time: params[:time].first(-4) << "00:00",
+        time: params[:time],
         focus: params[:focus],
         trainer_id: params[:trainer_id],
         user_id: current_user.id
